@@ -16,6 +16,8 @@ Vector2 position = new Vector2(400 ,300);
 Vector2 movement = new Vector2(2 ,1);
 Color hotpink = new Color(255, 105, 180, 255);
 
+
+Texture2D planeImage = Raylib.LoadTexture("boingPNG.png");
 Texture2D explosionImage = Raylib.LoadTexture("Explosion.png");
 Texture2D characterImage = Raylib.LoadTexture("PixelFrooge.png");
 Rectangle characterRect = new Rectangle(10, 10, 60, 60);
@@ -23,6 +25,10 @@ characterRect.width = characterImage.width;
 characterRect.height = characterImage.height;
 explosionImage.width = 200;
 explosionImage.height = 100;
+planeImage.width = 100;
+planeImage.height = 100;
+
+
 
 while (!Raylib.WindowShouldClose())
 {
@@ -76,9 +82,11 @@ if (car3X <= 0)
 car3X = 1030;
 }
 
-Raylib.DrawRectangle(x + 20, 260, 5, 20, Color.GRAY);
-Raylib.DrawRectangle(x, 280, 30, 10, Color.DARKGRAY);
-Raylib.DrawRectangle(x + 20, 290, 5, 20, Color.GRAY);
+Raylib.DrawTexture(planeImage,x ,280 , Color.WHITE);
+
+// Raylib.DrawRectangle(x + 20, 260, 5, 20, Color.GRAY);
+// Raylib.DrawRectangle(x, 280, 30, 10, Color.DARKGRAY);
+// Raylib.DrawRectangle(x + 20, 290, 5, 20, Color.GRAY);
 
 
 Raylib.DrawRectangle(500, 200, 200, 900, Color.GRAY);
@@ -97,11 +105,11 @@ Raylib.DrawRectangle(car2X, 768, 30, 10, Color.GRAY);
 Raylib.DrawRectangle(car2X + 8, 763, 15, 5, Color.GRAY);
 
 
-if ( 400 >= x && x >= 170 || 700 >= x && x >= 470)
+if ( 330 >= x && x >= 125 || 630 >= x && x >= 425)
 {
 
 
-Raylib.DrawTexture(explosionImage, x - 75, 220, Color.WHITE);
+Raylib.DrawTexture(explosionImage, x - 40, 290, Color.WHITE);
 
 // Raylib.DrawCircle(x + 5, 300, 50, Color.ORANGE);
 // Raylib.DrawCircle(x + 5, 300, 5, Color.RED);

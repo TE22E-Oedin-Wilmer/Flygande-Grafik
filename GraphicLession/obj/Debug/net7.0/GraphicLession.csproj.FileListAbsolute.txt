@@ -22,3 +22,4 @@ C:\Users\wilmer.odin\Documents\ProgrammeringKurs\Grafik\GraphicLession\obj\Debug
 C:\Users\wilmer.odin\Documents\ProgrammeringKurs\Grafik\GraphicLession\obj\Debug\net7.0\ref\GraphicLession.dll
 C:\Users\wilmer.odin\Documents\ProgrammeringKurs\Grafik\GraphicLession\bin\Debug\net7.0\Explosion.png
 C:\Users\wilmer.odin\Documents\ProgrammeringKurs\Grafik\GraphicLession\bin\Debug\net7.0\PixelFrooge.png
+C:\Users\wilmer.odin\Documents\ProgrammeringKurs\Grafik\GraphicLession\bin\Debug\net7.0\boingPNG.png
