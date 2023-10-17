@@ -11,6 +11,8 @@ int x = 0;
 int carX = 1000;
 int car2X = 1000;
 int car3X = 1000;
+int characterX = 50;
+int characterY = 50;
 
 Vector2 position = new Vector2(400 ,300);
 Vector2 movement = new Vector2(2 ,1);
@@ -21,14 +23,15 @@ Texture2D planeImage = Raylib.LoadTexture("boingPNG.png");
 Texture2D explosionImage = Raylib.LoadTexture("Explosion.png");
 Texture2D characterImage = Raylib.LoadTexture("PixelFrooge.png");
 Rectangle characterRect = new Rectangle(10, 10, 60, 60);
+Texture2D FisherImage = Raylib.LoadTexture("FishermanChar.png");
 characterRect.width = characterImage.width;
 characterRect.height = characterImage.height;
 explosionImage.width = 200;
 explosionImage.height = 100;
 planeImage.width = 100;
 planeImage.height = 100;
-
-
+FisherImage.width = 100;
+FisherImage.height = 100;
 
 while (!Raylib.WindowShouldClose())
 {
@@ -41,6 +44,8 @@ while (!Raylib.WindowShouldClose())
 
 characterRect.x += movement.X;
 characterRect.y += movement.Y;
+
+
 
 
     x++;
@@ -82,6 +87,58 @@ if (car3X <= 0)
 car3X = 1030;
 }
 
+if (Raylib.IsKeyDown(KeyboardKey.KEY_D))
+{
+characterX += 4;
+}
+
+if (Raylib.IsKeyDown(KeyboardKey.KEY_A))
+{
+characterX -= 4;
+}
+
+if (Raylib.IsKeyDown(KeyboardKey.KEY_S))
+{
+characterY += 4;
+}
+
+if (Raylib.IsKeyDown(KeyboardKey.KEY_W))
+{
+characterY -= 4;
+}
+
+if (characterX >= 1000)
+{
+characterX = -1;
+}
+
+if (characterX <= -35)
+{
+characterX = 999;
+}
+
+if (characterY >= 800)
+{
+characterY = -1;
+}
+
+if (characterY <= -35)
+{
+characterY = 799;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 Raylib.DrawTexture(planeImage,x ,280 , Color.WHITE);
 
 // Raylib.DrawRectangle(x + 20, 260, 5, 20, Color.GRAY);
@@ -103,6 +160,10 @@ Raylib.DrawRectangle(car3X + 8, 755, 15, 5, Color.DARKGRAY);
 
 Raylib.DrawRectangle(car2X, 768, 30, 10, Color.GRAY);
 Raylib.DrawRectangle(car2X + 8, 763, 15, 5, Color.GRAY);
+
+
+Raylib.DrawTexture(FisherImage, characterX, characterY, Color.WHITE);
+
 
 
 if ( 330 >= x && x >= 125 || 630 >= x && x >= 425)
