@@ -98,17 +98,17 @@ if (Raylib.IsKeyDown(KeyboardKey.KEY_D))
 characterX += 4;
 }
 
-else if (Raylib.IsKeyDown(KeyboardKey.KEY_A))
+if (Raylib.IsKeyDown(KeyboardKey.KEY_A))
 {
 characterX -= 4;
 }
 
-else if (Raylib.IsKeyDown(KeyboardKey.KEY_S))
+if (Raylib.IsKeyDown(KeyboardKey.KEY_S))
 {
 characterY += 4;
 }
 
-else if (Raylib.IsKeyDown(KeyboardKey.KEY_W))
+if (Raylib.IsKeyDown(KeyboardKey.KEY_W))
 {
 characterY -= 4;
 }
