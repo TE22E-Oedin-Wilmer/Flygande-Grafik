@@ -87,6 +87,12 @@ if (car3X <= 0)
 car3X = 1030;
 }
 
+
+
+
+
+
+
 if (Raylib.IsKeyDown(KeyboardKey.KEY_D))
 {
 characterX += 4;
@@ -126,8 +132,6 @@ if (characterY <= -35)
 {
 characterY = 799;
 }
-
-
 
 
 
