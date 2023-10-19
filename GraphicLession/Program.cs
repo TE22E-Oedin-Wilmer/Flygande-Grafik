@@ -24,12 +24,16 @@ Texture2D explosionImage = Raylib.LoadTexture("Explosion.png");
 Texture2D characterImage = Raylib.LoadTexture("PixelFrooge.png");
 Rectangle characterRect = new Rectangle(10, 10, 60, 60);
 Texture2D FisherImage = Raylib.LoadTexture("FishermanChar.png");
+
 characterRect.width = characterImage.width;
 characterRect.height = characterImage.height;
+
 explosionImage.width = 200;
 explosionImage.height = 100;
+
 planeImage.width = 100;
 planeImage.height = 100;
+
 FisherImage.width = 100;
 FisherImage.height = 100;
 
